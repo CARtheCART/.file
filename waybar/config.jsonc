@@ -112,39 +112,18 @@
       "2": "T2", // browser
       "3": "C3", // code
       "4": "M4",
-      
+      "urgent": "!", 
     },
-
-    "wlr/taskbar": {
-      "format": "{icon}",
-      "icon-size": 36,
-      "spacing": 3,
-      "on-click": "activate",
-      "on-click-middle": "close",
-      "tooltip-format": "{title}"
-    },
+  },
     "niri/workspaces": {
     	"format": "{icon}",
     	"format-icons": {
     		"active": "",
 	    	"default":"t"
-    	}
+    	},
 
 
 
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
