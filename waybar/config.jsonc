@@ -1,30 +1,21 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 26, // Waybar height
-    "width": 1920,   
-    
+    "height": 29, // Waybar height
+    "width": 1920,
+
   // Waybar width
     // Choose the order of the modules
-    "modules-left": ["custom/home", "niri/workspaces", "sway/workspaces", "sway/mode", "custom/media",],
-    "modules-center": [ "clock"],
-    "modules-right": ["pulseaudio","backlight","tray", "network", "cpu", "memory", "disk", "battery", "battery#bat2", "custom/rofi"],
+    "modules-left": ["custom/home", "niri/workspaces", "sway/workspaces", "sway/mode", "custom/media" ],
+    "modules-center": ["custom/rofi","clock","network" ],
+    "modules-right": ["pulseaudio","backlight","disk", "tray", "battery#bat2", "battery" ],
     // Modules configuration
-     "sway/workspaces": {
-         "disable-scroll": true,
-         "disable-markup" : false,
-         "all-outputs": true,
-         "format": "  {icon}  ",
-         //"format":"{icon}",
-         "format-icons": {
-             
-                    
-         }
-     },
+
 
       "sway/mode": {
         "format": "<span>{}</span>"
     },
+
 
     "disk": {
     "format": "<span color='#ffffff' ></span> {free}",
@@ -36,13 +27,13 @@
     },
     "clock": {
         "format": "{:%H:%M:%S}",
-        "format-alt": "{:%a:%D}",
-	"interval": 1,
-    
+        "format-alt": "{:%a:%d:%m:%y}",
+	      "interval": 1
     },
+
     "cpu": {
         "format": "{usage}% "
-    }, 
+    },
     "memory": {
         "format": "{}% "
     },
@@ -57,13 +48,13 @@
         "states": {
             "good": 95,
             "warning": 40,
-            "critical": 10
+            "critical": 15
         },
         "format": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""],
-        "interval": 1 
+        "interval": 1
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -91,7 +82,7 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
-    
+
     },
     "custom/rofi": {
         "format": "",
@@ -101,7 +92,7 @@
         },
 	"custom/home": {
 		"format": "$",
-		"on-click": "exec wofi -show drun",
+		"on-click": "exec wofi --show drun",
 		"on-click-right": "~/.config/Spy/fo.sh",
 		"interval": 0
 	},
@@ -112,18 +103,22 @@
       "2": "T2", // browser
       "3": "C3", // code
       "4": "M4",
-      "urgent": "!", 
-    },
-  },
-    "niri/workspaces": {
-    	"format": "{icon}",
-    	"format-icons": {
-    		"active": "",
-	    	"default":"t"
-    	},
-
-
-
+      "urgent": "!"
     }
-
+  },
+    //"niri/workspaces": {
+    	//"format": "{icon}",
+    	//"format-icons": {
+    	//	"active": "",
+	    //	"default":""
+    	//},
+    "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 1,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+    }
+    //set up "bluetooth",
 }
