@@ -6,7 +6,7 @@ case "$chosen" in
 "  ") poweroff ;;
 "  ") reboot ;;
 "  ")
-  swaylock -i ~/Pictures/bgs/bg7.jxl --fade-in 0.2 --indicator-radius 100 \
+  swaylock -i ~/.config/sway/bg.png --fade-in 0.2 --indicator-radius 100 \
     --indicator-thickness 7 \
     --ring-clear-color DAC4C1 \
     --indicator-x-position 940 \
